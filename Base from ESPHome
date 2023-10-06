@@ -1,0 +1,30 @@
+esphome:
+  name: t-display-washerdryer1
+  friendly_name: T-Display Washer/Dryer1
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "FdRaU+XURNW/UfCK23O8uGUC5uewS6RlIfMogF+foyY="
+
+ota:
+  password: "3aafcd417407a229cd3974eaacdcfe7f"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "T-Display-Washerdryer1"
+    password: "drummond"
+
+captive_portal:
